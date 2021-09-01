@@ -1,0 +1,100 @@
+package abhi;
+
+import java.util.Scanner;
+
+public class dada {
+
+	private static int k;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("my program for using all stringbuffer");
+		//scan the element
+	    Scanner sc=new Scanner(System.in);
+	    //manu  are display
+	    System.out.println("1.delete\n2.deletecharAt()\n3.insert\n4.append\n5.reverse\n6.replace\n7.palindrom");
+
+
+	    int num;
+	    //do while loop using
+	    do {
+	    	System.out.println("\nenter your case:");
+	     num=sc.nextInt();
+	    switch(num) {
+	    case  1://cesses for need
+	    	System.out.printf("string is delete:");
+
+	       StringBuffer sb=new StringBuffer("rohan kadam");
+	     System.out.println(sb.delete(0, 3));
+	    	 break;
+	    case 2:
+	    	System.out.printf("using deletecharAt:");
+	    	 StringBuffer av=new StringBuffer("rohan kadam");
+		     System.out.println(av.deleteCharAt(3));
+	    	       break;
+	    case 3:
+	    	System.out.printf("insert new character in a string:");
+	    	 StringBuffer rm=new StringBuffer("rohan kadam");
+		     System.out.println(rm.insert(k, 0));
+	    	   break;
+	    case 4:
+	    	System.out.printf("append the string:");
+	    	StringBuffer rs=new StringBuffer("rohan kadam");
+		     System.out.println((rs.append(4)));
+
+	    	   break;
+	    case 5:
+	    	System.out.printf("revers the string:");
+	    	StringBuffer vs=new StringBuffer("rohan kadam");
+		     System.out.println(vs.reverse());
+	    	   break;
+	    case 6:
+	    	System.out.printf("check both string are equal or greater:");
+	    	StringBuffer ma=new StringBuffer("rohan kadam");
+		    
+			System.out.println(ma.replace(1,3,null));
+             break;
+	    case 7:
+	    	System.out.printf("check the string is palindrom not:");
+	    	StringBuffer ru=new StringBuffer("123");
+	    	String s2=ru.toString();
+	    	StringBuffer rt=new StringBuffer("121");
+		     System.out.println( "\nfirst reverse string:"+ru.reverse());
+		     StringBuffer mk=ru.reverse();
+		    System.out.println( "\nsecond reverse string:"+rt.reverse());
+		    StringBuffer rk=rt.reverse();
+		     if(mk.equals(s2)) {
+		    	 System.out.println("\nfirst string is palindrom");
+		     }
+		     else
+		     {
+		    	 System.out.println("\nfirst string is not palindrom");
+		     }
+		   if(rk.equals(rt)) {
+		    	 System.out.println("\nsecond string is palindrom");
+		     }
+		     else
+		     {
+		    	 System.out.println("\nsecond string is not palindrom");
+		     }
+		     
+		     
+             break;
+	    case 8:	    
+	    	System.exit(0);
+	    	
+	      default :
+	               System.out.println("enter correct choice");
+	    }
+	    }  while(num!=8);    
+	    }
+
+
+
+
+	
+
+
+	}
+
+
