@@ -1,0 +1,61 @@
+package wipro;
+import java.util.Scanner;
+public class Method {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    System.out.println("my program for using  all method");
+    Scanner sc=new Scanner(System.in);
+    System.out.println("1.display the length of string:,\n2.convert given string in to lower case:\n3.finf substring of the given string\n4.display string in revers format\n5.check both string aare same or not:\n6checck bothe string are same or which one of greater");
+
+
+    int num;
+    do {
+    	System.out.println("\nenter your case:");
+     num=sc.nextInt();
+    switch(num) {
+    case  1:
+    	System.out.printf("length of given string:");
+       String str="rohan kadam";
+     System.out.println(str.length());
+    	 break;
+    case 2:
+    	System.out.printf("convert given string in lower case:");
+            String dist="SOLAPUR";
+    	      System.out.println(dist.toLowerCase());
+    	       break;
+    case 3:
+    	System.out.printf("substring of given string:");
+          String clg="sangola";
+    	   System.out.println(clg.substring(1, 5));
+    	   break;
+    case 4:
+    	System.out.printf("write given string in reverse format:");
+          String all="sangola";
+          for(int i=all.length();i<=0;i--) {
+        	  System.out.println(all.charAt(i));
+          }
+    	   break;
+    case 5:
+    	System.out.printf("check both string are equal:");
+          String sandy="sangola";
+          String rk="solapur";
+          System.out.println(sandy.equals(rk));
+    	   break;
+    case 6:
+    	System.out.printf("check both string are equal or greater:");
+          String abhi="sangola";
+          String  vishwa="solapur";
+          System.out.println(abhi.equals(vishwa));
+
+    	   break;
+    case 7:
+    	System.exit(0);
+      default :
+               System.out.println("enter correct choice");
+    }
+    }  while(num!=7);    
+    }
+
+
+	}
