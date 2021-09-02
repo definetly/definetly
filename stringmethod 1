@@ -1,0 +1,55 @@
+package abc;
+import java.util.*;
+public class StringDemo {
+	boolean one(String str)
+	{
+		boolean var=true;
+		System.out.println("First Que");
+		for(int i=0;i<=str.length()-1;i++) {
+			boolean ani=Character.isLetter(str.charAt(i));
+			if (ani) {
+				System.out.println("alphabate :"+str.charAt(i));
+			}
+			if (ani==false) {
+				var=false;
+				System.out.println("Other than alphabate :"+str.charAt(i));
+				//System.out.println("Your string in incorrect for alphabate");
+				//break;
+				}
+			}
+		return var;
+		}
+		
+	private String str(int i) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	boolean two(String str)
+	{
+		boolean var1=true;
+		System.out.println("Second Que");
+		for(int i=0;i<=str.length()-1;i++) {
+			boolean ani1=Character.isLetter(str.charAt(i));
+			boolean ani2=Character.isDigit(str.charAt(i));
+			if (!(ani1 || ani2)) {
+				var1=false;
+				System.out.println("your srting is incorrect for alphanumric");
+				break;
+			}
+			}
+		return var1;
+		}
+	
+	
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter any string you want to check :");
+		String str= sc.nextLine();
+		System.out.println(new StringDemo().one(str));
+		System.out.println(new StringDemo().two(str));
+		
+	}
+
+}
