@@ -1,0 +1,62 @@
+package jdbcrv.java;
+import java.sql.*;
+import java.util.Scanner;
+
+//import javax.naming.spi.DirStateFactory.Result;
+
+public class studInfo {
+	
+	int insertData() throws ClassNotFoundException,SQLException{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter rollno ");
+int rollno=sc.nextInt();
+System.out.println("enter name ");
+String name=sc.next();
+System.out.println("enter address ");
+String address=sc.next();
+System.out.println("enter contactno");
+int contactno=sc.nextInt();
+System.out.println("enter marks ");
+float marks=sc.nextFloat();
+
+		String	sq1="insert into studInfo values(?,?,?,?,?)";
+		
+		DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
+		
+		//System.out.println(" driver registered");
+		Connection con=DriverManager.getConnection("jdbc:Oracle:thin:@localhost:1521:XE","wipror","rutu12");
+		//System.out.println("connected");
+		
+		PreparedStatement pt=con.prepareStatement(sq1);
+		
+
+		pt.setInt(1,rollno);
+		pt.setString(2, name);
+		pt.setString(3, address);
+		pt.setInt(4,contactno);
+		pt.setFloat(5, marks);
+		
+		int status=pt.executeUpdate();
+		con.close();
+		
+		return status;
+		
+		
+	}
+
+	public static void main(String[] args) throws ClassNotFoundException,SQLException {
+		Scanner sc= new Scanner(System.in);
+		System.out.println("enter count of student");
+		int n=sc.nextInt();
+		
+		for(int i=1;i<=n;i++) {
+			
+		
+int p=new  studInfo().insertData();
+System.out.println(i+"th record saved successfully");
+		}
+		System.out.println("end of your count");
+	}
+}
+
+
