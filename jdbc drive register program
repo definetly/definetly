@@ -1,0 +1,18 @@
+import java.sql.*;
+import oracle.jdbc.driver.*;
+public class Gg {
+	public static void main(String[] args)throws Exception { 
+		DriverManager.registerDriver(new OracleDriver());
+System.out.println("Success");
+//get connection
+Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","password");
+System.out.println("connection successufully");
+//create statement
+PreparedStatement pt= con.prepareStatement("insert into std1 values(1,'mahadev',20)");
+int status=pt.executeUpdate();
+con.close();
+
+
+	}
+
+}
