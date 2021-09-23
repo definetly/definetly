@@ -1,0 +1,49 @@
+package Atm;
+
+import java.util.Scanner;
+
+public class MoneyAtm {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub2
+int Withdraw,Deposite = 0,ballence=1000000;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("welcome in ATM mechaine.");
+		do {
+		System.out.println("1.Withdraw money\n2.Deposite money\n3.check account ballence\n4.exit");
+		int choice=sc.nextInt();
+		
+		switch(choice) {
+		case 1:
+			System.out.println("enter amount to Withdraw: ");
+			Withdraw=sc.nextInt();
+			  if(ballence>Withdraw) {
+				  ballence=ballence-Withdraw;
+				  
+				  System.out.println(ballence);
+				  break;
+	
+			  }
+		 case 2:
+			 System.out.println("enter amount to deposited: ");
+			 Deposite=sc.nextInt();
+			 Deposite= Deposite+ballence;
+			 System.out.println(Deposite);
+			 break; 
+		
+		 case 3:
+			
+			 Deposite= Deposite+ballence;
+			 System.out.println("check your account ballence: "); 
+			 System.out.println(ballence);
+			 break;
+		 default :
+			   System.out.println("please enter correct choice..........."); 
+		 
+		}
+		      
+		}while(true);
+	}
+
+	
+}
