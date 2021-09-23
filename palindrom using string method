@@ -1,0 +1,27 @@
+package Reverse1;
+
+import java.util.Scanner;
+
+public class ThisRevers {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		  int a= sc.nextInt();
+		  System.out.println(a);
+		  String str=Integer. toString(a);
+		  StringBuilder sb=new StringBuilder(str);
+		  sb.reverse();
+		  System.out.println("reverse"+sb);
+		      String str1= sb.toString();
+		      System.out.println("string"+str1);
+		   int b= Integer.parseInt(str1);
+		      if(a==b) {
+		    	  System.out.println("no is palindrom");
+		     }
+		      else {
+		    	  System.out.println("no is not palindrom");
+		      }
+	}
+
+}
