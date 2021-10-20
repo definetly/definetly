@@ -1,0 +1,83 @@
+package vishwa;
+
+import java.util.Scanner;
+
+public class Usemethod {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		Usemethod d=new Usemethod();
+		d.add();
+		d.sub();
+		d.mult();
+		d.div();
+		// d.input1();
+
+	}
+	double input1() {
+	 System.out.println("enter the first number:");
+	 Scanner sc=new Scanner(System.in);
+	int a=	sc.nextInt();
+		return a;  
+
+	}
+ double input2() {
+	 System.out.println("enter the second number:");
+	 Scanner sc=new Scanner(System.in);
+	int b=	sc.nextInt();
+		return b;  
+
+	}
+ void add() {
+		Usemethod d=new Usemethod();
+		double a= d.input1();
+		double b= d.input2();
+		double c=a+b;
+
+
+		System.out.println("addition:"+c);
+
+
+	}
+ void sub() {
+		Usemethod d=new Usemethod();
+		double a= d.input1();
+		double b= d.input2();
+
+		double g=a-b;
+
+
+
+		System.out.println("substractoin:"+g);
+
+
+	}
+ void mult() {
+		Usemethod d=new Usemethod();
+		double a= d.input1();
+		double b= d.input2();
+
+		double e=a*b;
+
+
+
+		System.out.println("multiplication:"+e);
+
+
+	}
+ void div() {
+		Usemethod d=new Usemethod();
+		double a= d.input1();
+		double b= d.input2();
+
+		double f=a/b;
+
+
+		System.out.println("division:"+f);
+
+
+	}
+
+	}
+
